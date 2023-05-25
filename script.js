@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#search-button').click(function() {
+  $('#search-button').on('click', function() {
     var city = $('#city-input').val();
     if (city !== '') {
       var apiKey = 523db02a5fd9feaf907bb544946b23ef;
@@ -34,4 +34,5 @@ $(document).ready(function() {
     $('#weather-info').html(info);
   }
 });
+
 
