@@ -1,57 +1,41 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-	margin-top: 50px;
-	font-size: 3em;
+  text-align: center;
 }
 
-p {
-	font-size: 2em;
+.search-bar {
+  margin-bottom: 20px;
 }
 
-button {
-	margin-top: 50px;
-	font-size: 2em;
-	padding: 10px 20px;
-	border: none;
-	background-color: #008CBA;
-	color: #fff;
-	cursor: pointer;
+#city-input {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
 }
 
-#question {
-	margin-top: 50px;
-	font-size: 2em;
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-#options {
-	margin-top: 50px;
-	font-size: 2em;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-
-.option {
-	margin: 10px;
-	padding: 10px 20px;
-	border: none;
-	background-color: #ddd;
-	color: #000;
-	cursor: pointer;
-}
-
-.option:hover {
-	background-color: #ccc;
+#weather-info {
+  font-size: 18px;
 }
