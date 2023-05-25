@@ -2,8 +2,9 @@ $(document).ready(function() {
   $('#search-button').click(function() {
     var city = $('#city-input').val();
     if (city !== '') {
-      // Simulating API call with sample data
-      var apiUrl = api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key} + city;
+      var apiKey = 523db02a5fd9feaf907bb544946b23ef;
+      var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey;
+      
       $.ajax({
         url: apiUrl,
         method: 'GET',
@@ -20,13 +21,17 @@ $(document).ready(function() {
   });
 
   function displayWeatherInfo(data) {
+    var cityName = data.name;
+    var temperature = Math.round(data.main.temp - 273.15); // Convert to Celsius
+    var humidity = data.main.humidity;
+    var windSpeed = data.wind.speed;
+
     var info = '';
-    info += '<p><strong>City:</strong> ' + data.city + '</p>';
-    info += '<p><strong>Temperature:</strong> ' + data.temperature + '°C</p>';
-    info += '<p><strong>Humidity:</strong> ' + data.humidity + '%</p>';
-    info += '<p><strong>Wind Speed:</strong> ' + data.windSpeed + ' km/h</p>';
+    info += '<p><strong>City:</strong> ' + cityName + '</p>';
+    info += '<p><strong>Temperature:</strong> ' + temperature + '°C</p>';
+    info += '<p><strong>Humidity:</strong> ' + humidity + '%</p>';
+    info += '<p><strong>Wind Speed:</strong> ' + windSpeed + ' km/h</p>';
     $('#weather-info').html(info);
   }
 });
-
 
