@@ -3,7 +3,7 @@ $(document).ready(function() {
     var city = $('#city-input').val();
     if (city !== '') {
       // Simulating API call with sample data
-      var apiUrl = 'https://api.example.com/weather?city=' + city;
+      var apiUrl = api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key} + city;
       $.ajax({
         url: apiUrl,
         method: 'GET',
