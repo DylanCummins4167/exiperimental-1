@@ -2,8 +2,8 @@ $(document).ready(function() {
   $('#search-button').on('click', function() {
     var city = $('#city-input').val();
     if (city !== '') {
-      var apiKey = '523db02a5fd9feaf907bb544946b23ef';
-      var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey;
+     
+      var apiUrl = api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={523db02a5fd9feaf907bb544946b23ef}
       
       $.ajax({
         url: apiUrl,
