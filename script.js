@@ -2,18 +2,14 @@ $(document).ready(function() {
   $('#search-button').click(function() {
     var city = $('#city-input').val();
     if (city !== '') {
-      // Simulating API call with sample data
-      var apiUrl = 'https://api.example.com/weather?city=' + city;
-      $.ajax({
-        url: apiUrl,
-        method: 'GET',
-        success: function(response) {
-          displayWeatherInfo(response);
-        },
-        error: function() {
-          $('#weather-info').html('Failed to fetch weather data.');
-        }
-      });
+      // Simulated API call with sample data
+      var sampleData = {
+        city: city,
+        temperature: '25',
+        humidity: '60',
+        windSpeed: '10'
+      };
+      displayWeatherInfo(sampleData);
     } else {
       $('#weather-info').html('Please enter a city name.');
     }
