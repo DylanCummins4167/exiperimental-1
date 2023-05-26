@@ -33,7 +33,7 @@ $(document).ready(function() {
       var windSpeed = forecastData.wind.speed;
 
       info += '<div class="forecast-item">';
-      info += '<p><strong>Date:</strong> ' + forecastDate.toDateString() + '</p>';
+      info += '<h3>' + forecastDate.toDateString() + '</h3>';
       info += '<p><strong>Temperature:</strong> ' + temperature + '°C</p>';
       info += '<p><strong>Humidity:</strong> ' + humidity + '%</p>';
       info += '<p><strong>Wind Speed:</strong> ' + windSpeed + ' km/h</p>';
@@ -43,6 +43,7 @@ $(document).ready(function() {
     $('#weather-info').html(info);
   }
 });
+
 
 
 
